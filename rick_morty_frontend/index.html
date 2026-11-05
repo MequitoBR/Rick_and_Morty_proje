@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rick & Morty Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="#">RICK <b>&</b> MORTY <small>CHARACTER EXPLORER</small></a><a href="#personagens">Explorar ↘</a></header>
+<main>
+<section class="hero">
+<div><p class="eyebrow">✦ MULTIVERSO CONECTADO</p><h1>Conheça o universo <em>Rick and Morty.</em></h1>
+<p>Explore personagens, descubra seus status e viaje por diferentes dimensões. Os dados são carregados diretamente de uma API pública.</p>
+<a class="cta" href="#personagens">Ver personagens ↓</a><small class="hint">Dados consultados em tempo real na API.</small></div>
+<div class="portal"><span>WUBBA<br>LUBBA<br>DUB DUB!</span></div>
+</section>
+<section id="personagens" class="section">
+<div class="heading"><div><p class="eyebrow">BANCO DE PERSONAGENS</p><h2>Habitantes do <em>multiverso</em></h2><p>Os cards são criados automaticamente com os dados recebidos da API.</p></div><strong id="counter">Carregando...</strong></div>
+<div class="controls">
+<input id="search" type="search" placeholder="Buscar personagem pelo nome..." aria-label="Buscar personagem">
+<select id="status" aria-label="Filtrar por status"><option value="all">Todos os status</option><option value="alive">Vivo</option><option value="dead">Morto</option><option value="unknown">Desconhecido</option></select>
+<button id="clear" type="button">Limpar filtros</button>
+</div>
+<p id="message" role="status" aria-live="polite">Conectando à API...</p>
+<div id="cards" class="grid"></div>
+<div class="pagination"><button id="prev" disabled>← Anterior</button><span id="page">Página 1</span><button id="next" disabled>Próxima →</button></div>
+</section>
+<section class="about"><span>⌁</span><div><p class="eyebrow">COMO FUNCIONA</p><h2>Uma página conectada a dados reais.</h2><p>O JavaScript usa <code>fetch()</code> para consultar a API, cria elementos HTML e os adiciona à página com <code>appendChild()</code>.</p></div></section>
+</main>
+<footer><b>RICK & MORTY EXPLORER</b><span>Projeto acadêmico • HTML, CSS e JavaScript</span><a href="#">Voltar ao topo ↑</a></footer>
+</body></html>
